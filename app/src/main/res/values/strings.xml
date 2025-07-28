@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">EVDOS GamePad</string>
+    <string name="action_settings">Settings</string>
+
+     <!-- Bluetooth -->
+    <string name="connect_bluetooth">Connect Bluetooth</string>
+    <string name="connect_bluetooth_desc">Button to connect this device to Bluetooth</string>
+
+    <!-- Floating action button -->
+    <string name="fab_desc">Action Button</string>
+
+    <!-- Accelerometer display -->
+    <string name="accelerometer_label">Accelerometer</string>
+    <string name="accel_text">X: %.2f\nY: %.2f\nZ: %.2f</string>
+
+    <!-- D-Pad button labels -->
+    <string name="btn_X">X</string>
+    <string name="btn_B">B</string>
+    <string name="btn_Y">Y</string>
+    <string name="btn_A">A</string>
+    <string name="btn_center">S</string>
+</resources>

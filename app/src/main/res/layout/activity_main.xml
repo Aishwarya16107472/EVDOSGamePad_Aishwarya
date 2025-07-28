@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+    <!-- Main content area -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/accelerometerLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="4dp" />
+
+        <!-- Accelerometer Text -->
+        <TextView
+            android:id="@+id/accelerometerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accel_text"
+            android:textSize="30sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Bluetooth Button -->
+        <Button
+            android:id="@+id/buttonConnectBluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/connect_bluetooth"
+            android:contentDescription="@string/connect_bluetooth_desc" />
+    </LinearLayout>
+
+    <!-- D-Pad moved to bottom-left corner -->
+    <GridLayout
+        android:id="@+id/dpadContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:rowCount="3"
+        android:columnCount="3">
+
+        <Space android:layout_width="48dp" android:layout_height="48dp"/>
+        <Button
+            android:id="@+id/btnX"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="@string/btn_X" />
+        <Space android:layout_width="48dp" android:layout_height="48dp"/>
+
+        <Button
+            android:id="@+id/btnY"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="@string/btn_Y" />
+        <Button
+            android:id="@+id/btnCenter"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="@string/btn_center" />
+        <Button
+            android:id="@+id/btnA"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="@string/btn_A" />
+
+        <Space android:layout_width="48dp" android:layout_height="48dp"/>
+        <Button
+            android:id="@+id/btnB"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:text="@string/btn_B" />
+        <Space android:layout_width="48dp" android:layout_height="48dp"/>
+    </GridLayout>
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginEnd="0dp">
+
+        <com.devadvance.circularseekbar.CircularSeekBar
+            android:id="@+id/circularSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:circle_color="#DDDDDD"
+            app:circle_progress_color="#008577"
+            app:circle_x_radius="100dp"
+            app:circle_y_radius="100dp"
+            app:end_angle="270"
+            app:max="255"
+            app:pointer_color="#FF8888"
+            app:pointer_halo_color="#888888"
+            app:progress="127"
+            app:start_angle="90" />
+
+        <TextView
+            android:id="@+id/throttleLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Drive"
+            android:textSize="42sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
